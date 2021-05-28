@@ -17,7 +17,7 @@ use App\Http\Controllers\EventController;
 */
 
 Route::get('/events', [EventController::class, 'AllEvent']);
-Route::get('/participant/{event_id}', [EventController::class, 'FetchParticipant']);
+Route::get('/participant', [EventController::class, 'FetchParticipant']);
 Route::post('/events/register', [EventController::class, 'RegisterEvent']);
 Route::post('/register', [UserController::class, 'register']);
 Route::post('/login', [UserController::class, 'login']);
