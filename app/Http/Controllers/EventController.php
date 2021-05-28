@@ -46,7 +46,7 @@ class EventController extends Controller
     }
 
     public function FetchParticipant(Request $request){
-        $event_id = $request->input('event_id');
+        $event_id = $request->query('event_id');
         try {
             $participants = Participant::where('event_id', $event_id)
             ->join('users', 'participants.idparticipants', '=', 'users.iduser')
