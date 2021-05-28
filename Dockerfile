@@ -44,8 +44,6 @@ COPY --chown=root:root . /var/www
 
 RUN chown -R root:root /var/www
 RUN chmod 775 /var/www
-RUN npm install .
-RUN npm run prod
 
 COPY ./public /var/www/public
 
